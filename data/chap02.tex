@@ -1,0 +1,19 @@
+\chapter{开放通道SSD与高性能应用}
+\label{cha:ssd_hpc}
+
+\section{开放通道SSD设备简介}
+\subsection{SSD内部结构}
+\subsection{SSD读写特点}
+\subsection{开放通道SSD简介}
+
+\section{高性能应用的IO特征分析}
+\subsection{MACDRP应用的IO特征分析}
+\subsubsection{执行流程分析}
+\subsubsection{IO Trace分析}
+\subsection{LAMMPS应用的IO特征分析}
+\subsubsection{执行流程分析}
+\subsubsection{IO Trace分析}
+
+\section{基于开放通道SSD的高性能应用IO优化}
+% 传统设备: 就地更新; SSD: 异地更新, log-structured
+% 普通SSD设备: FTL位于设备内部, 对所有应用使用相同的映射/垃圾回收方式; 开放通道SSD: FTL可软件定义, 可以针对应用特点指定合适的映射/垃圾回收方式

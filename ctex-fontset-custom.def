@@ -1,0 +1,15 @@
+\setCJKmainfont[BoldFont=SimHei,ItalicFont=KaiTi]{SimSun}
+\setCJKsansfont{SimHei}
+\setCJKmonofont{KaiTi}
+\setCJKfamilyfont{zhsong}{SimSun}
+\setCJKfamilyfont{zhhei}{SimHei}
+\setCJKfamilyfont{zhfs}{FangSong}
+\setCJKfamilyfont{zhkai}{KaiTi}
+\setCJKfamilyfont{zhyouyuan}{YouYuan}
+\setCJKfamilyfont{zhlishu}{LiSu}
+\NewDocumentCommand\songti{}{\CJKfamily{zhsong}}
+\NewDocumentCommand\heiti{}{\CJKfamily{zhhei}}
+\NewDocumentCommand\fangsong{}{\CJKfamily{zhfs}}
+\NewDocumentCommand\kaishu{}{\CJKfamily{zhkai}}
+\NewDocumentCommand\youyuan{}{\CJKfamily{zhyouyuan}}
+\NewDocumentCommand\lishu{}{\CJKfamily{zhlishu}}
