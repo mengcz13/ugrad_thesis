@@ -5,7 +5,7 @@
 \subsection{访问流程}
 传统SSD的访问方式如图\ref{fig:imple_traditional_ssd}所示。用户态程序发出的文件操作请求经内核的虚拟文件系统和物理文件系统处理后，物理文件系统将请求转换为对块设备的读写操作。传统SSD设备内部设置的闪存转换层（Flash Translation Layer）对外提供了与块设备兼容的接口，使得原本为块设备设计的文件系统能够在SSD上直接使用；闪存转换层对内负责处理逻辑地址到物理地址的映射、垃圾回收和负载均衡工作，将对块设备的请求转换为对闪存芯片的读、写和擦除操作。
 
-开放通道SSD的访问方式如图\ref{fig:imple_ocssd}，用户态程序可以通过liblightnvm库对SSD内部结构进行直接访问，从而无需经过文件系统和闪存转换层。在这种访问方式下，用户态程序可以模拟出闪存转换层需要提供的映射、垃圾回收和负载均衡功能，并能够根据自身IO特征进行适当的优化。
+开放通道SSD的访问方式如图\ref{fig:imple_ocssd}，用户态程序可以通过liblightnvm库\footnote{https://github.com/OpenChannelSSD/liblightnvm}对SSD内部结构进行直接访问，从而无需经过文件系统和闪存转换层。在这种访问方式下，用户态程序可以模拟出闪存转换层需要提供的映射、垃圾回收和负载均衡功能，并能够根据自身IO特征进行适当的优化。
 
 \begin{figure}[H]
     \centering
@@ -18,7 +18,7 @@
     \label{fig:imple_ssdvisit}
 \end{figure}
 
-具体到本文的实现，由于可供评测的数据为高性能应用运行时文件系统下发的IO Trace，因此可以在用户态的评测程序中实现不同的优化策略，读取IO Trace进行重放并通过liblightnvm直接操作开放通道SSD。为了便于评测时统计相关信息，实现时没有直接使用liblightnvm提供的读写接口，而是在开源的开放通道SSD评测工具fox的基础上进行改进。fox在liblightnvm提供的接口基础上增加了统计信息的记录，能够测量全过程的平均吞吐量，读/写/擦除操作的平均延迟以及精确到每页的读/写/擦除操作的大小和延迟。fox本身只提供了几种预先定义的IO序列，用于测试开放通道SSD的连续读取、连续写入和读取写入按一定比例混合交替进行时的性能。利用这些序列可以得到所用SSD的基本性能如表\ref{tab:imple_ocssd_perf}所示：
+具体到本文的实现，由于可供评测的数据为高性能应用运行时文件系统下发的IO Trace，因此可以在用户态的评测程序中实现不同的优化策略，读取IO Trace进行重放并通过liblightnvm直接操作开放通道SSD。为了便于评测时统计相关信息，实现时没有直接使用liblightnvm提供的读写接口，而是在开源的开放通道SSD评测工具fox\footnote{https://github.com/DFC-OpenSource/fox}的基础上进行改进。fox在liblightnvm提供的接口基础上增加了统计信息的记录，能够测量全过程的平均吞吐量，读/写/擦除操作的平均延迟以及精确到每页的读/写/擦除操作的大小和延迟。fox本身只提供了几种预先定义的IO序列，用于测试开放通道SSD的连续读取、连续写入和读取写入按一定比例混合交替进行时的性能。利用这些序列可以得到所用SSD的基本性能如表\ref{tab:imple_ocssd_perf}所示：
 
 \begin{table}[htb]
     \centering
