@@ -1,224 +1,269 @@
-@book{IEEE-1363,
-  author =       {{IEEE Std 1363-2000}},
-  title =        {{IEEE} Standard Specifications for Public-Key Cryptography},
-  address =      {New York},
-  publisher =    {IEEE},
-  year =         2000
+
+@inproceedings{he_i/o_2013,
+	title = {I/{O} acceleration with pattern detection},
+	isbn = {978-1-4503-1910-2},
+	url = {http://dl.acm.org/citation.cfm?doid=2493123.2462909},
+	doi = {10.1145/2493123.2462909},
+	abstract = {The I/O bottleneck in high-performance computing is becoming worse as application data continues to grow. In this work, we explore how patterns of I/O within these applications can significantly affect the effectiveness of the underlying storage systems and how these same patterns can be utilized to improve many aspects of the I/O stack and mitigate the I/O bottleneck. We offer three main contributions in this paper. First, we develop and evaluate algorithms by which I/O patterns can be efﬁciently discovered and described. Second, we implement one such algorithm to reduce the metadata quantity in a virtual parallel ﬁle system by up to several orders of magnitude, thereby increasing the performance of writes and reads by up to 40 and 480 percent respectively. Third, we build a prototype ﬁle system with pattern-aware prefetching and evaluate it to show a 46 percent reduction in I/O latency. Finally, we believe that efﬁcient pattern discovery and description, coupled with the observed predictability of complex patterns within many high-performance applications, offers signiﬁcant potential to enable many additional I/O optimizations.},
+	language = {en},
+	urldate = {2018-05-14},
+	publisher = {ACM Press},
+	author = {He, Jun and Bent, John and Torres, Aaron and Grider, Gary and Gibson, Garth and Maltzahn, Carlos and Sun, Xian-He},
+	year = {2013},
+	pages = {25},
+	file = {He et al. - 2013 - IO acceleration with pattern detection.pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/CEF2EECX/He et al. - 2013 - IO acceleration with pattern detection.pdf:application/pdf}
 }
 
-@inproceedings{kocher99,
-  author =       {C. Kocher and J. Jaffe and B. Jun},
-  title =        {Differential Power Analysis},
-  editor =       {M. Wiener},
-  booktitle =    {Advances in Cryptology ({CRYPTO}~'99)},
-  series =       {Lecture Notes in Computer Science},
-  volume =       1666,
-  pages =        {388-397},
-  publisher =    {Springer-Verlag},
-  month =        {August},
-  year =         1999
+@article{bjorling_lightnvm:_nodate,
+	title = {{LightNVM}: {The} {Linux} {Open}-{Channel} {SSD} {Subsystem}},
+	abstract = {As Solid-State Drives (SSDs) become commonplace in data-centers and storage arrays, there is a growing demand for predictable latency. Traditional SSDs, serving block I/Os, fail to meet this demand. They offer a high-level of abstraction at the cost of unpredictable performance and suboptimal resource utilization. We propose that SSD management trade-offs should be handled through Open-Channel SSDs, a new class of SSDs, that give hosts control over their internals. We present our experience building LightNVM, the Linux Open-Channel SSD subsystem. We introduce a new Physical Page Address I/O interface that exposes SSD parallelism and storage media characteristics. LightNVM integrates into traditional storage stacks, while also enabling storage engines to take advantage of the new I/O interface. Our experimental results demonstrate that LightNVM has modest host overhead, that it can be tuned to limit read latency variability and that it can be customized to achieve predictable I/O latencies.},
+	language = {en},
+	author = {Bjørling, Matias and González, Javier and Bonnet, Philippe},
+	pages = {17},
+	file = {Bjørling et al. - LightNVM The Linux Open-Channel SSD Subsystem.pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/K39Q4MT9/Bjørling et al. - LightNVM The Linux Open-Channel SSD Subsystem.pdf:application/pdf}
 }
 
-@incollection{Krasnogor2004e,
-  author =       {N. Krasnogor},
-  title =        {Towards robust memetic algorithms},
-  booktitle =    {Recent Advances in Memetic Algorithms},
-  publisher =    {Springer Berlin Heidelberg},
-  year =         2004,
-  pages =        {185-207},
-  editor =       {W.E. Hart and N. Krasnogor and J.E. Smith},
-  volume =       166,
-  series =       {Studies in Fuzziness and Soft Computing},
-  address =      {New York},
+@article{lu_extending_nodate,
+	title = {Extending the {Lifetime} of {Flash}-based {Storage} through {Reducing} {Write} {Ampliﬁcation} from {File} {Systems}},
+	abstract = {Flash memory has gained in popularity as storage devices for both enterprise and embedded systems because of its high performance, low energy and reduced cost. The endurance problem of ﬂash memory, however, is still a challenge and is getting worse as storage density increases with the adoption of multi-level cells (MLC). Prior work has addressed wear leveling and data reduction, but there is signiﬁcantly less work on using the ﬁle system to improve ﬂash lifetimes. Some common mechanisms in traditional ﬁle systems, such as journaling, metadata synchronization, and page-aligned update, can induce extra write operations and aggravate the wear of ﬂash memory. This problem is called write ampliﬁcation from ﬁle systems.},
+	language = {en},
+	author = {Lu, Youyou and Shu, Jiwu and Zheng, Weimin},
+	pages = {14},
+	file = {Lu et al. - Extending the Lifetime of Flash-based Storage thro.pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/2WATJBNI/Lu et al. - Extending the Lifetime of Flash-based Storage thro.pdf:application/pdf}
 }
 
-@incollection{zjsw,
-  author =       {班固},
-  title =        {苏武传},
-  booktitle =    {传记散文英华},
-  publisher =    {湖北人民出版社},
-  year =         1998,
-  pages =        {65-69},
-  editor =       {郑在瀛 and 汪超宏 and 周文复},
-  volume =       2,
-  series =       {新古文观止丛书},
-  address =      {武汉},
-  language =     "chinese",
+@inproceedings{shan_characterizing_2008,
+	title = {Characterizing and predicting the {I}/{O} performance of {HPC} applications using a parameterized synthetic benchmark},
+	isbn = {978-1-4244-2834-2},
+	url = {http://ieeexplore.ieee.org/document/5222721/},
+	doi = {10.1109/SC.2008.5222721},
+	abstract = {The unprecedented parallelism of new supercomputing platforms poses tremendous challenges to achieving scalable performance for I/O intensive applications. Performance assessments using traditional I/O system and component benchmarks are difﬁcult to relate back to application I/O requirements. However, the complexity of full applications motivates development of simpler synthetic I/O benchmarks as proxies to the full application. In this paper we examine the I/O requirements of a range of HPC applications and describe how the LLNL IOR synthetic benchmark was chosen as suitable proxy for the diverse workload. We show a procedure for selecting IOR parameters to match the I/O patterns of the selected applications and show it can accurately predict the I/O performance of the full applications. We conclude that IOR is an effective replacement for full-application I/O benchmarks and can bridge the gap of understanding that typically exists between stand-alone benchmarks and the full applications they intend to model.},
+	language = {en},
+	urldate = {2018-05-14},
+	publisher = {IEEE},
+	author = {Shan, Hongzhang and Antypas, Katie and Shalf, John},
+	month = nov,
+	year = {2008},
+	pages = {1--12},
+	file = {Shan et al. - 2008 - Characterizing and predicting the IO performance .pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/B9GF2J54/Shan et al. - 2008 - Characterizing and predicting the IO performance .pdf:application/pdf}
 }
 
-@inbook{clzs,
-  author =       {阎真},
-  title =        {沧浪之水},
-  chapter =      {大人物还是讲人情的},
-  pages =        {185-207},
-  publisher =    {人民文学出版社},
-  year =         2001,
-  language =     "chinese",
+@inproceedings{yin_boosting_2012,
+	title = {Boosting {Application}-{Specific} {Parallel} {I}/{O} {Optimization} {Using} {IOSIG}},
+	isbn = {978-1-4673-1395-7 978-0-7695-4691-9},
+	url = {http://ieeexplore.ieee.org/document/6217422/},
+	doi = {10.1109/CCGrid.2012.136},
+	abstract = {Many scientific applications spend a significant portion of their execution time in accessing data from files. Various optimization techniques exist to improve data access performance, such as data prefetching and data layout optimization. However, optimization process is usually a difficult task due to the complexity involved in understanding I/O behavior. Tools that can help simplify the optimization process have a significant importance. In this paper, we introduce a tool, called IOSIG, for providing a better understanding of parallel I/O accesses and information to be used for optimization techniques. The tool enables tracing parallel I/O calls of an application and analyzing the collected information to provide a clear understanding of I/O behavior of the application. We show that performance overheads of the tool in trace collection and analysis are negligible. The analysis step creates I/O signatures that various optimizations can use for improving I/O performance. I/O signatures are compact, easy-to-understand, and parameterized representations containing data access pattern information such as size, strides between consecutive accesses, repetition, timing, etc. The signatures include local I/O behavior for each process and global behavior for an overall application. We illustrate the usage of the IOSIG tool in data prefetching and data layout optimizations.},
+	language = {en},
+	urldate = {2018-05-14},
+	publisher = {IEEE},
+	author = {Yin, Yanlong and Byna, Surendra and Song, Huaiming and Sun, Xian-He and Thakur, Rajeev},
+	month = may,
+	year = {2012},
+	pages = {196--203},
+	file = {Yin et al. - 2012 - Boosting Application-Specific Parallel IO Optimiz.pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/IQ459WRD/Yin et al. - 2012 - Boosting Application-Specific Parallel IO Optimiz.pdf:application/pdf}
 }
 
-@book{tex,
-  author =       "Donald E. Knuth",
-  title =        "The {\TeX} Book",
-  publisher =    "Addison-Wesley Publishing Company",
-  address =      "Reading, MA",
-  year =         1989,
-  edition =      "15th",
+@inproceedings{wang_efficient_2014,
+	title = {An efficient design and implementation of {LSM}-tree based key-value store on open-channel {SSD}},
+	isbn = {978-1-4503-2704-6},
+	url = {http://dl.acm.org/citation.cfm?doid=2592798.2592804},
+	doi = {10.1145/2592798.2592804},
+	abstract = {Various key-value (KV) stores are widely employed for data management to support Internet services as they offer higher efﬁciency, scalability, and availability than relational database systems. The log-structured merge tree (LSM-tree) based KV stores have attracted growing attention because they can eliminate random writes and maintain acceptable read performance. Recently, as the price per unit capacity of NAND ﬂash decreases, solid state disks (SSDs) have been extensively adopted in enterprise-scale data centers to provide high I/O bandwidth and low access latency. However, it is inefﬁcient to naively combine LSM-tree-based KV stores with SSDs, as the high parallelism enabled within the SSD cannot be fully exploited. Current LSM-tree-based KV stores are designed without assuming SSD’s multi-channel architecture.},
+	language = {en},
+	urldate = {2018-05-14},
+	publisher = {ACM Press},
+	author = {Wang, Peng and Sun, Guangyu and Jiang, Song and Ouyang, Jian and Lin, Shiding and Zhang, Chen and Cong, Jason},
+	year = {2014},
+	pages = {1--14},
+	file = {Wang et al. - 2014 - An efficient design and implementation of LSM-tree.pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/HWBE6ZEJ/Wang et al. - 2014 - An efficient design and implementation of LSM-tree.pdf:application/pdf}
 }
 
-@book{companion,
-  author =       "Michel Goosens and Frank Mittelbach and Alexander Samarin",
-  title =        "The {\LaTeX} Companion",
-  publisher =    "Addison-Wesley Publishing Company",
-  address =      "Reading, MA",
-  PAGES =        "112--125",
-  year =         1994,
+@inproceedings{lee_case_2008,
+	title = {A case for flash memory ssd in enterprise database applications},
+	isbn = {978-1-60558-102-6},
+	url = {http://portal.acm.org/citation.cfm?doid=1376616.1376723},
+	doi = {10.1145/1376616.1376723},
+	abstract = {Due to its superiority such as low access latency, low energy consumption, light weight, and shock resistance, the success of ﬂash memory as a storage alternative for mobile computing devices has been steadily expanded into personal computer and enterprise server markets with ever increasing capacity of its storage. However, since ﬂash memory exhibits poor performance for small-to-moderate sized writes requested in a random order, existing database systems may not be able to take full advantage of ﬂash memory without elaborate ﬂash-aware data structures and algorithms. The objective of this work is to understand the applicability and potential impact that ﬂash memory SSD (Solid State Drive) has for certain type of storage spaces of a database server where sequential writes and random reads are prevalent. We show empirically that up to more than an order of magnitude improvement can be achieved in transaction processing by replacing magnetic disk with ﬂash memory SSD for transaction log, rollback segments, and temporary table spaces.},
+	language = {en},
+	urldate = {2018-05-14},
+	publisher = {ACM Press},
+	author = {Lee, Sang-Won and Moon, Bongki and Park, Chanik and Kim, Jae-Myung and Kim, Sang-Woo},
+	year = {2008},
+	pages = {1075},
+	file = {Lee et al. - 2008 - A case for flash memory ssd in enterprise database.pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/YI4L5783/Lee et al. - 2008 - A case for flash memory ssd in enterprise database.pdf:application/pdf}
 }
 
-@article{ELIDRISSI94,
-  author =       "{Chafik El Idrissi}, M. and {Roney}, A. and {Frigon}, C. and
-                  {Larzilli{\`e}re}, M.",
-  title =        "Measurements of total kinetic-energy released to the {$N=2$}
-                  dissociation limit of {H}$_2$ --- evidence of the dissociation
-                  of very high vibrational {R}ydberg states of {H}$_2$ by
-                  doubly-excited states",
-  journal =      "Chemical Physics Letters",
-  pages =        "260-266",
-  volume =       224,
-  number =       10,
-  year =         1994,
+@article{luu_multi-level_nodate,
+	title = {A {Multi}-{Level} {Approach} for {Understanding} 1/0 {Activity} in {HPC} {Applications}},
+	abstract = {I/O has become one of the determining factors of HPC application performance. Understanding an application's I/O activity requires a multi-level view of the I/O function flow that includes high-level I/O libraries. We have developed a tracing framework, called Recorder, that captures I/O function calls at multiple layers of the parallel I/O stack without requiring source code modifications. In this paper, we show how Recorder's trace output can be used to investigate I/O activity and identify performance inefficiencies in two I/O benchmarks running on a leading edge HPC platform. Future work to organize and present the collected information more intuitively will further increase the value of Recorder's capabilities. We believe that a multi-level I/O tracing framework can provide key insights to end users and I/O library developers working to improve I/O on HPC platforms.},
+	language = {en},
+	author = {Luu, Huong and Behzad, Babak and Aydt, Ruth and Winslett, Marianne},
+	pages = {5},
+	file = {Luu et al. - A Multi-Level Approach for Understanding 10 Activ.pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/6B6BC2UR/Luu et al. - A Multi-Level Approach for Understanding 10 Activ.pdf:application/pdf}
 }
 
-@article{MELLINGER96,
-  author =       "Mellinger, A. and Vidal, C. R. and Jungen, Ch.",
-  title =        "Laser reduced fluorescence study of the carbon-monoxide nd
-                  triplet {R}ydberg series-experimental results and multichannel
-                  quantum-defect analysis",
-  journal =      "J. Chem. Phys.",
-  pages =        "8913-8921",
-  volume =       104,
-  number =       5,
-  year =         1996,
+@article{liu_performance_2017,
+	title = {Performance {Evaluation} and {Modeling} of {HPC} {I}/{O} on {Non}-{Volatile} {Memory}},
+	url = {http://arxiv.org/abs/1705.03598},
+	abstract = {HPC applications pose high demands on I/O performance and storage capability. The emerging non-volatile memory (NVM) techniques offer low-latency, high bandwidth, and persistence for HPC applications. However, the existing I/O stack are designed and optimized based on an assumption of disk-based storage. To effectively use NVM, we must reexamine the existing high performance computing (HPC) I/O subsystem to properly integrate NVM into it. Using NVM as a fast storage, the previous assumption on the inferior performance of storage (e.g., hard drive) is not valid any more. The performance problem caused by slow storage may be mitigated; the existing mechanisms to narrow the performance gap between storage and CPU may be unnecessary and result in large overhead. Thus fully understanding the impact of introducing NVM into the HPC software stack demands a thorough performance study.},
+	language = {en},
+	urldate = {2018-05-14},
+	journal = {arXiv:1705.03598 [cs]},
+	author = {Liu, Wei and Wu, Kai and Liu, Jialin and Chen, Feng and Li, Dong},
+	month = may,
+	year = {2017},
+	note = {arXiv: 1705.03598},
+	keywords = {Computer Science - Distributed, Parallel, and Cluster Computing},
+	file = {Liu et al. - 2017 - Performance Evaluation and Modeling of HPC IO on .pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/68QEAICE/Liu et al. - 2017 - Performance Evaluation and Modeling of HPC IO on .pdf:application/pdf}
 }
 
-@article{SHELL02,
-  author =       "Michael Shell",
-  title =        "How to Use the {IEEEtran \LaTeX} Class",
-  journal =      "Journal of {\LaTeX} Class Files",
-  year =         2002,
-  volume =       12,
-  number =       4,
-  pages =        "100--120"
+@article{bjorling_open-channel_2017,
+	title = {Open-{Channel} {SSDs} {Then}. {Now}. {And} {Beyond}.},
+	language = {en},
+	author = {Bjørling, Matias},
+	year = {2017},
+	pages = {25},
+	file = {Bjørling - 2017 - Open-Channel SSDs Then. Now. And Beyond..pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/MPQ6AE7F/Bjørling - 2017 - Open-Channel SSDs Then. Now. And Beyond..pdf:application/pdf}
 }
 
-@TechReport{NPB2,
-  title =        {The {NAS} Parallel Benchmarks 2.0},
-  author =       {Alex Woo and David Bailey and Maurice Yarrow and Wijngaart
-                  Wijngaart and Tim Harris and William Saphir},
-  year =         1995,
-  month =        dec # "~05",
-  institution =  "The Pennsylvania State University CiteSeer Archives",
-  url =          "http://www.nasa.org/"
+@inproceedings{he_unwritten_2017,
+	title = {The {Unwritten} {Contract} of {Solid} {State} {Drives}},
+	isbn = {978-1-4503-4938-3},
+	url = {http://dl.acm.org/citation.cfm?doid=3064176.3064187},
+	doi = {10.1145/3064176.3064187},
+	abstract = {We perform a detailed vertical analysis of application performance atop a range of modern ﬁle systems and SSD FTLs. We formalize the “unwritten contract” that clients of SSDs should follow to obtain high performance, and conduct our analysis to uncover application and ﬁle system designs that violate the contract. Our analysis, which utilizes a highly detailed SSD simulation underneath traces taken from real workloads and ﬁle systems, provides insight into how to better construct applications, ﬁle systems, and FTLs to realize robust and sustainable performance.},
+	language = {en},
+	urldate = {2018-05-14},
+	publisher = {ACM Press},
+	author = {He, Jun and Kannan, Sudarsun and Arpaci-Dusseau, Andrea C. and Arpaci-Dusseau, Remzi H.},
+	year = {2017},
+	pages = {127--144},
+	file = {He et al. - 2017 - The Unwritten Contract of Solid State Drives.pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/BAMBUBD5/He et al. - 2017 - The Unwritten Contract of Solid State Drives.pdf:application/pdf}
 }
 
-@inproceedings{DPMG,
-  author =       {Kim, Sangbum and Woo, Namyoon and Yeom, Heon Y. and Park,
-                  Taesoon and Park, Hyoungwoo},
-  title =        {Design and {I}mplementation of {D}ynamic {P}rocess
-                  {M}anagement for {G}rid-enabled {MPICH}},
-  booktitle =    {the 10th European PVM/MPI Users' Group Conference},
-  year =         2003,
-  address =      {Venice, Italy},
-  month =        sep,
+@inproceedings{picoli_uflip-oc:_2017,
+	title = {{uFLIP}-{OC}: {Understanding} {Flash} {I}/{O} {Patterns} on {Open}-{Channel} {Solid}-{State} {Drives}},
+	isbn = {978-1-4503-5197-3},
+	shorttitle = {{uFLIP}-{OC}},
+	url = {http://dl.acm.org/citation.cfm?doid=3124680.3124741},
+	doi = {10.1145/3124680.3124741},
+	abstract = {Solid-State Drives (SSDs) have gained acceptance by providing the same block device abstraction as magnetic hard drives, at the cost of suboptimal resource utilisation and unpredictable performance. Recently, Open-Channel SSDs have emerged as a means to obtain predictably high performance, based on a clean break from the block device abstraction. Open-channel SSDs embed a minimal flash translation layer (FTL) and expose their internals to the host. The Linux open-channel SSD subsystem, LightNVM, lets kernel modules as well as user-space applications control data placement and I/O scheduling. This way, it is the host that is responsible for SSD management. But what kind of performance model should the host rely on to guide the way it manages data placement and I/O scheduling? For addressing this question we have defined uFLIPOC, a benchmark designed to identify the I/O patterns that are best suited for a given open-channel SSD. Our experiments on a DragonFire Card (DFC) SSD, equipped with the OX controller, illustrate the performance impact of media characteristics and parallelism. We discuss how uFLIP-OC can be used to guide the design of host-based data systems on open-channel SSDs.},
+	language = {en},
+	urldate = {2018-05-14},
+	publisher = {ACM Press},
+	author = {Picoli, Ivan Luiz and Pasco, Carla Villegas and Jónsson, Björn Þór and Bouganim, Luc and Bonnet, Philippe},
+	year = {2017},
+	pages = {1--7},
+	file = {Picoli et al. - 2017 - uFLIP-OC Understanding Flash IO Patterns on Open.pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/LTHZAENG/Picoli et al. - 2017 - uFLIP-OC Understanding Flash IO Patterns on Open.pdf:application/pdf}
 }
 
-@inproceedings{cnproceed,
-  author =       {王重阳 and 黄药师 and 欧阳峰 and 洪七公 and 段皇帝},
-  title =        {武林高手从入门到精通},
-  booktitle =    {第~$N$~次华山论剑},
-  year =         2006,
-  address =      {西安, 中国},
-  month =        sep,
-  language =     "chinese",
+@article{bouganim_uflip:_nodate,
+	title = {{uFLIP}: {Understanding} {Flash} {IO} {Patterns}},
+	abstract = {Does the advent of flash devices constitute a radical change for secondary storage? How should database systems adapt to this new form of secondary storage? Before we can answer these questions, we need to fully understand the performance characteristics of flash devices. More specifically, we want to establish what kind of IOs should be favored (or avoided) when designing algorithms and architectures for flash-based systems. In this paper, we focus on flash IO patterns, that capture relevant distribution of IOs in time and space, and our goal is to quantify their performance. We define uFLIP, a benchmark for measuring the response time of flash IO patterns. We also present a benchmarking methodology which takes into account the particular characteristics of flash devices. Finally, we present the results obtained by measuring eleven flash devices, and derive a set of design hints that should drive the development of flash-based systems on current devices.},
+	language = {en},
+	author = {Bouganim, Luc and Jónsson, Björn Þór and Bonnet, Philippe},
+	pages = {12},
+	file = {Bouganim et al. - uFLIP Understanding Flash IO Patterns.pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/8PXIEWLN/Bouganim et al. - uFLIP Understanding Flash IO Patterns.pdf:application/pdf}
 }
 
-@article{cnarticle,
-  author =       "贾宝玉 and 林黛玉 and 薛宝钗 and 贾探春",
-  title =        "论刘姥姥食量大如牛之现实意义",
-  journal =      "红楼梦杂谈",
-  pages =        "260--266",
-  volume =       224,
-  year =         1800,
-  language =     "chinese",
+@inproceedings{zheng_toward_2013,
+	title = {Toward millions of file system {IOPS} on low-cost, commodity hardware},
+	isbn = {978-1-4503-2378-9},
+	url = {http://dl.acm.org/citation.cfm?doid=2503210.2503225},
+	doi = {10.1145/2503210.2503225},
+	abstract = {We describe a storage system that removes I/O bottlenecks to achieve more than one million IOPS based on a userspace ﬁle abstraction for arrays of commodity SSDs. The ﬁle abstraction refactors I/O scheduling and placement for extreme parallelism and non-uniform memory and I/O. The system includes a set-associative, parallel page cache in the user space. We redesign page caching to eliminate CPU overhead and lock-contention in non-uniform memory architecture machines. We evaluate our design on a 32 core NUMA machine with four, eight-core processors. Experiments show that our design delivers 1.23 million 512-byte read IOPS. The page cache realizes the scalable IOPS of Linux asynchronous I/O (AIO) and increases user-perceived I/O performance linearly with cache hit rates. The parallel, set-associative cache matches the cache hit rates of the global Linux page cache under real workloads.},
+	language = {en},
+	urldate = {2018-05-14},
+	publisher = {ACM Press},
+	author = {Zheng, Da and Burns, Randal and Szalay, Alexander S.},
+	year = {2013},
+	pages = {1--12},
+	file = {Zheng et al. - 2013 - Toward millions of file system IOPS on low-cost, c.pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/4PFXHYU6/Zheng et al. - 2013 - Toward millions of file system IOPS on low-cost, c.pdf:application/pdf}
 }
 
-@mastersthesis{zhubajie,
-  author =       {猪八戒},
-  title =        {论流体食物的持久保存},
-  school =       {广寒宫大学},
-  year =         2005,
-  address =      {北京},
-  language =     "chinese",
+@inproceedings{luu_multiplatform_2015,
+	title = {A {Multiplatform} {Study} of {I}/{O} {Behavior} on {Petascale} {Supercomputers}},
+	isbn = {978-1-4503-3550-8},
+	url = {http://dl.acm.org/citation.cfm?doid=2749246.2749269},
+	doi = {10.1145/2749246.2749269},
+	abstract = {We examine the I/O behavior of thousands of supercomputing applications “in the wild,” by analyzing the Darshan logs of over a million jobs representing a combined total of six years of I/O behavior across three leading high-performance computing platforms. We mined these logs to analyze the I/O behavior of applications across all their runs on a platform; the evolution of an application’s I/O behavior across time, and across platforms; and the I/O behavior of a platform’s entire workload. Our analysis techniques can help developers and platform owners improve I/O performance and I/O system utilization, by quickly identifying underperforming applications and offering early intervention to save system resources. We summarize our observations regarding how jobs perform I/O and the throughput they attain in practice.},
+	language = {en},
+	urldate = {2018-05-14},
+	publisher = {ACM Press},
+	author = {Luu, Huong and Winslett, Marianne and Gropp, William and Ross, Robert and Carns, Philip and Harms, Kevin and Prabhat, Mr and Byna, Suren and Yao, Yushu},
+	year = {2015},
+	pages = {33--44},
+	file = {Luu et al. - 2015 - A Multiplatform Study of IO Behavior on Petascale.pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/2R8Y94HK/Luu et al. - 2015 - A Multiplatform Study of IO Behavior on Petascale.pdf:application/pdf}
 }
 
-@phdthesis{shaheshang,
-  author =       {沙和尚},
-  title =        {论流沙河的综合治理},
-  school =       {清华大学},
-  year =         2005,
-  address =      {北京},
-  language =     "chinese",
+@article{rosenblum_design_1992,
+	title = {The design and implementation of a log-structured file system},
+	volume = {10},
+	language = {en},
+	number = {1},
+	author = {ROSENBLUM, MENDEL and OUSTERHOUT, JOHN K},
+	year = {1992},
+	pages = {27},
+	file = {ROSENBLUM and OUSTERHOUT - 1992 - The design and implementation of a log-structured .pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/638KKVQD/ROSENBLUM and OUSTERHOUT - 1992 - The design and implementation of a log-structured .pdf:application/pdf}
 }
 
-@mastersthesis{metamori2004,
-  author =       {Ashwin Raju Jeyakumar},
-  title =        {Metamori: A library for Incremental File Checkpointing},
-  school =       {Virgina Tech},
-  year =         2004,
-  month =        jun # "~21",
-  address =      {Blacksburg},
+@misc{noauthor_log_2015,
+	title = {Log {Structured} {Merge} {Trees}},
+	url = {http://www.benstopford.com/2015/02/14/log-structured-merge-trees/},
+	abstract = {A detailed look at the interesting LSM file organisation seen in BigTable, Cassandra and most recently MongoDB},
+	language = {en-US},
+	urldate = {2018-05-14},
+	journal = {ben stopford},
+	month = feb,
+	year = {2015},
+	file = {Snapshot:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/ZYZHVS97/log-structured-merge-trees.html:text/html}
 }
 
-@phdthesis{FistSystem01,
-  author =       "Erez Zadok",
-  title =        "{FiST: A System for Stackable File System Code Generation}",
-  year =         2001,
-  month =        "May",
-  school =       "Computer Science Department, Columbia University",
-  address =      "USA"
+@misc{noauthor_list_2017,
+	title = {List of log-structured file systems},
+	copyright = {Creative Commons Attribution-ShareAlike License},
+	url = {https://en.wikipedia.org/w/index.php?title=List_of_log-structured_file_systems&oldid=800931077},
+	abstract = {List of log-structured file system implementations.
+James T, Brady while in IBM Poughkeepsie Lab conceived a log structured paging file system in 1979 which was implemented in MVS SP2 in 1980.
+John K. Ousterhout and Mendel Rosenblum implemented the first log-structured file system for the Sprite operating system in 1992.
+BSD-LFS, an implementation by Margo Seltzer was added to 4.4BSD, and was later ported to 386BSD. It lacked support for snapshots. It was removed from FreeBSD and OpenBSD, but still lives on in NetBSD.
+Plan 9's Fossil file system is also log-structured and supports snapshots.
+NILFS is a log-structured file system implementation for Linux by NTT/Verio which supports snapshots.
+LinLogFS (formerly dtfs) and LFS are log-structured file system implementations for Linux. The latter was part of Google Summer of Code 2005. Both projects have been abandoned.
+LFS is another log-structured file system for Linux developed by Charles University, Prague. It was to include support for snapshots and indexed directories, but development has since ceased.
+ULFS is a User-Level Log-structured File System using FUSE.
+Write Anywhere File Layout (WAFL) by NetApp is a file layout that supports large, high-performance RAID arrays, quick restarts without lengthy consistency checks in the event of a crash or power failure, and growing the filesystems size quickly. Built using log-structured file system concept, snapshots and off-line data deduplication.
+LSFS is a log-structured file system with writable snapshots and inline data deduplication created by StarWind Software.
+Cache Accelerated Sequential Layout (CASL) is a proprietary log-structured filesystem developed by Nimble Storage that uses Solid State Devices to cache traditional hard drives.
+ObjectiveFS is a log-structured FUSE filesystem that uses cloud object stores (e.g. Amazon S3, Google Cloud Storage and private cloud object store).
+NOVA for byte-addressable persistent memory (for example non-volatile dual in-line memory module (NVDIMM) and 3D XPoint) for Linux developed at the University of California, San Diego, US.
+Some kinds of storage media, such as flash memory and CD-RW, slowly degrade as they are written to and have a limited number of erase/write cycles at any one location. Log-structured file systems are sometimes used on these media because they make fewer in-place writes and thus prolong the life of the device by wear leveling. The more common such file systems include:
+UDF is a file system commonly used on optical discs.
+JFFS and its successor JFFS2 are simple Linux file systems intended for raw flash-based devices.
+UBIFS is a filesystem for raw NAND flash media and also intended to replace JFFS2.
+LogFS is a scalable flash filesystem for Linux that works on both raw flash media and block devices, intended to replace JFFS2.
+YAFFS is a raw NAND flash-specific file system for many operating systems (including Linux).
+F2FS is a new file system designed for the NAND flash memory-based storage devices on Linux.},
+	language = {en},
+	urldate = {2018-05-14},
+	journal = {Wikipedia},
+	month = sep,
+	year = {2017},
+	note = {Page Version ID: 800931077},
+	file = {Snapshot:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/7K73YU9G/index.html:text/html}
 }
 
-@inbook{ColdSources,
-  author =       {P. Gr{\"o}ning and L. Nilsson and P. Ruffieux and R.
-                  Clergereaux and O. Gr{\"o}ning},
-  title =        {Encyclopedia of Nanoscience and Nanotechnology},
-  pages =        {547--579},
-  publisher =    {American Scientific Publishers},
-  year =         2004,
-  volume =       1,
+@misc{noauthor_log-structured_nodate,
+	title = {Log-structured file systems: {There}'s one in every {SSD} [{LWN}.net]},
+	url = {https://lwn.net/Articles/353411/},
+	urldate = {2018-05-15},
+	file = {Log-structured file systems\: There's one in every SSD [LWN.net]:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/6PKZFGWF/353411.html:text/html}
 }
 
-@online{chuban2001,
-  author =      {萧钰},
-  title =       {出版业信息化迈入快车道},
-  modifydate =  {2001-12-19},
-  citedate =    {2002-04-15},
-  url =         {http://www.creader.com/news/200112190019.htm},
-  language =    "chinese",
-}
-
-@online{oclc2000,
-  author =      {{Online Computer Library Center, Inc.}},
-  title =       {History of {OCLC}},
-  citedate =    {2000-01-08},
-  url =         {http://www.oclc.org/about/history/default.htm},
-}
-
-
-@online{thuthesis,
-  author =      {薛瑞尼},
-  title =       {\thuthesis: 清华大学学位论文模板},
-  citedate =    {2017-12-02},
-  url =         {https://github.com/xueruini/thuthesis},
-  language =    "chinese",
-  year =        2017,
+@misc{gonzalez_towards_nodate,
+	title = {Towards {Application} {Driven} {Storage} - {Optimizing} {RocksDB} for {Open}-{Channel} {SSDs}},
+	url = {https://events.static.linuxfound.org/sites/events/files/slides/LCE2015_RocksDB%2BLightNVM.pdf},
+	author = {González, Javier},
+	file = {LCE2015_RocksDB+LightNVM.pdf:/home/neozero/ntfsmp/Users/neozero/Documents/zotero_papers/storage/XGTFZPQ2/LCE2015_RocksDB+LightNVM.pdf:application/pdf}
 }
