@@ -31,7 +31,7 @@ SSD，全称为固态硬盘（solid-state drive），是一种由多个闪存芯
 \section{高性能应用的IO特征分析}
 这里选择LAMMPS和MACDRP两种高性能应用，采集它们运行一段时间内的IO Trace并分析其特点。由于2种应用运行时会向不同的主机写入数据，且经汇总发现对于IO操作数最多的前10台主机其IO特征高度一致，故以下分析时只取其中操作数最多的一台主机上的IO Trace进行分析。
 \subsection{LAMMPS应用的IO特征分析}
-LAMMPS的全称为大规模原子/分子大量并行模拟器（Large-scale Atomic/Molecular Massively Parallel Simulator）。它能够并行模拟原子、中观或者连续体尺度上的大规模粒子行为。
+LAMMPS的全称为大规模原子/分子大量并行模拟器。它能够并行模拟原子、中观或者连续体尺度上的大规模粒子行为。
 
 \begin{figure}[H]
   \centering
