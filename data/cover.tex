@@ -19,7 +19,7 @@
   cdepartment={计算机科学与技术系},
   cmajor={计算机科学与技术},
   cauthor={孟垂正},
-  csupervisor={舒继武教授},
+  csupervisor={舒继武\ \ 教授},
   % cassosupervisor={陈文光教授}, % 副指导老师
   % ccosupervisor={某某某教授}, % 联合指导老师
   % 日期自动使用当前时间，若需指定按如下方式修改：
@@ -61,19 +61,19 @@
   % edate={December, 2005}
   %
   % 关键词用“英文逗号”分割
-  ckeywords={开放通道SSD,高性能应用,超级块映射},
-  ekeywords={open-channel ssd,high performance computing application,super-block mapping}
+  ckeywords={开放通道SSD,高性能应用,混合超级块映射},
+  ekeywords={open-channel ssd,high performance computing application,mixed super-block mapping}
 }
 
 % 定义中英文摘要和关键字
 \begin{cabstract}
-  本文主要研究在开放通道SSD上利用高性能应用的IO负载特性优化其IO性能的问题。高性能应用的IO负载具有IO请求地址按页对齐，负载中覆盖写比例很高的特点。具有这种特点的IO序列在SSD上会产生大量不含有任何脏页的无效数据块，回收时可直接擦除而无需重新写入脏页。现有方法采用的页粒度的地址映射高度灵活性的优势在这种负载下无法发挥，反而徒然增加了映射表维护的开销。本文提出的基于超级块粒度地址映射的优化方法减少了这一不必要的开销，同时维持了与现有方法相近的吞吐性能。实验表明，本文采用的超级块映射-贪心垃圾回收方法能够利用更小的映射表和更低的映射表维护成本达到与现有方法相近的IO性能。
+  本文主要研究在开放通道SSD上利用高性能应用的IO负载特性优化其IO性能的问题。高性能应用的IO负载具有IO请求地址按页对齐，负载中覆盖写比例很高的特点。具有这种特点的IO序列在SSD上会产生大量不含有任何脏页的无效数据块，回收时可直接擦除而无需重新写入脏页。现有方法采用的页粒度的地址映射高度灵活性的优势在这种负载下无法发挥，反而徒然增加了映射表维护的开销。本文提出的混合页粒度和超级块粒度地址映射的优化方法减少了这一不必要的开销，同时能够应对负载中少量块不对齐和小于块大小的写入操作。实验表明，本文采用的混合超级块映射-贪心垃圾回收方法能够利用更小的映射表和更低的映射表维护成本达到与现有方法相近的IO性能。
 
   本文的工作主要有：
   \begin{itemize}
     \item 抓取了典型高性能计算应用LAMMPS和MACDRP的IO负载记录并分析了二者的负载特征；
     \item 在用户态实现了多种IO优化策略与相应的评测程序；
-    \item 将现有方法页粒度的地址映射改进为超级块粒度的映射，在保证IO性能不下降的同时大幅减少了映射表体积和维护开销。
+    \item 将现有方法页粒度的地址映射改进为混合超级块映射，在保证IO性能下降不太大的同时大幅减少了映射表体积和维护开销。
   \end{itemize}
 \end{cabstract}
 
@@ -81,13 +81,13 @@
 % \ckeywords{\TeX, \LaTeX, CJK, 模板, 论文}
 
 \begin{eabstract}
-  This article focuses on optimizing the IO performance of an open channel SSD using high-performance application IO load characteristics. In the IO load of high-performance applications, the IO request address is page-aligned and the load has a high write-to-write ratio. An IO sequence with these characteristics will produce a large number of invalid data blocks on the SSD that do not contain any dirty pages, which can be erased directly with no dirty page requiring rewritting. The page-granularity address mapping used by the existing method cannot enjoy the benefit of its flexibility under such a load, but in turn increases the overhead of maintaining the mapping table. The optimization method based on super-block granularity address mapping proposed in this paper reduces this unnecessary overhead while maintaining similar throughput performance to the existing method. Experiments show that the proposed method can use a smaller map and a lower map maintenance cost to achieve similar IO performance to the existing method.
+  This article focuses on optimizing the IO performance of an open channel SSD using high-performance application IO load characteristics. In the IO load of high-performance applications, the IO request address is page-aligned and the load has a high write-to-write ratio. An IO sequence with these characteristics will produce a large number of invalid data blocks on the SSD that do not contain any dirty pages, which can be erased directly with no dirty page requiring rewritting. The page-granularity address mapping used by the existing method cannot enjoy the benefit of its flexibility under such a load, but in turn increases the overhead of maintaining the mapping table. The optimization method mixing page granularity and super-block granularity address mapping proposed in this paper reduces this unnecessary overhead while dealing with some write operations not aligned to block or having a size smaller than the size of a block. Experiments show that the proposed method can use a smaller map and a lower map maintenance cost to achieve similar IO performance to the existing method.
 
   The work of the paper includes:
   \begin{itemize}
     \item Tracking the IO load of two high-performance computing applications and analyzing characteristics of their IO records;
     \item Implementing multiple optimization strategies and corresponding benchmark tools;
-    \item Modifying page-granularity address mapping in the existing method to super-block granularity address mapping, which reduces the size and the maintaining cost of the mapping table while keeping the IO performance.
+    \item Modifying page-granularity address mapping in the existing method to super-block granularity address mapping, which reduces the size and the maintaining cost of the mapping table while keeping the IO performance not reducing a lot.
   \end{itemize}
 \end{eabstract}
 

@@ -36,10 +36,10 @@ LAMMPS的全称为大规模原子/分子大量并行模拟器。它能够并行�
 \begin{figure}[H]
   \centering
   \subcaptionbox{LAMMPS的IO Trace\label{fig:iotrace_lammps}}
-    {\includegraphics[width=0.4\textwidth]{iotrace_lammps.pdf}}
+    {\includegraphics[width=0.4\textwidth]{iotrace_lammps.png}}
   \hspace{4em}
   \subcaptionbox{LAMMPS的IO Trace（部分）\label{fig:iotrace_lammps_sub}}
-      {\includegraphics[width=0.4\textwidth]{iotrace_lammps_sub.pdf}}
+      {\includegraphics[width=0.4\textwidth]{iotrace_lammps_sub.png}}
   \caption{LAMMPS的IO Trace}
   \label{fig:iotrace_lammps_all}
 \end{figure}
@@ -49,17 +49,30 @@ LAMMPS的全称为大规模原子/分子大量并行模拟器。它能够并行�
 \begin{figure}[H]
   \centering
   \subcaptionbox{LAMMPS的IO请求数据量累积分布函数\label{fig:iotrace_lammps_iosize_cdf}}
-    {\includegraphics[width=0.25\textwidth]{iotrace_lammps_iosize_cdf.pdf}}
+    {\includegraphics[width=0.25\textwidth]{iotrace_lammps_iosize_cdf.png}}
   \hspace{1em}
   \subcaptionbox{LAMMPS的IO请求起始地址页内偏移量累积分布函数\label{fig:iotrace_lammps_iostart_cdf}}
-      {\includegraphics[width=0.25\textwidth]{iotrace_lammps_iostart_cdf.pdf}}
+      {\includegraphics[width=0.25\textwidth]{iotrace_lammps_iostart_cdf.png}}
       \hspace{1em}
       \subcaptionbox{LAMMPS的IO请求结束地址页内偏移量累积分布函数\label{fig:iotrace_lammps_ioend_cdf}}
-          {\includegraphics[width=0.25\textwidth]{iotrace_lammps_ioend_cdf.pdf}}
+          {\includegraphics[width=0.25\textwidth]{iotrace_lammps_ioend_cdf.png}}
   \caption{LAMMPS的IO请求按页对齐情况}
   \label{fig:iotrace_lammps_iocdf}
 \end{figure}
 图\ref{fig:iotrace_lammps_iocdf}展示了LAMMPS的IO请求按页对齐的情况。这里的页大小取为后续实验使用的SSD页大小32768KB。如图\ref{fig:iotrace_lammps_iosize_cdf}，几乎所有的IO请求大小都大于500KB。如图\ref{fig:iotrace_lammps_iostart_cdf}和图\ref{fig:iotrace_lammps_ioend_cdf}，全部的IO请求起始地址和结束地址都对齐到页，同时表明IO请求的大小也按页对齐。
+
+\begin{figure}[H]
+  \centering
+  \subcaptionbox{LAMMPS的IO请求起始地址块内偏移量累积分布函数\label{fig:iotrace_lammps_iostart_block_cdf}}
+      {\includegraphics[width=0.4\textwidth]{iotrace_lammps_iostart_block_cdf.png}}
+      \hspace{1em}
+      \subcaptionbox{LAMMPS的IO请求结束地址块内偏移量累积分布函数\label{fig:iotrace_lammps_ioend_block_cdf}}
+          {\includegraphics[width=0.4\textwidth]{iotrace_lammps_ioend_block_cdf.png}}
+  \caption{LAMMPS的IO请求按块对齐情况}
+  \label{fig:iotrace_lammps_iocdf_block}
+\end{figure}
+
+图\ref{fig:iotrace_lammps_iocdf_block}展示了LAMMPS的IO请求按块对齐的情况。这里的块大小取为后续实验使用的SSD块大小1MB（32个页）。由图\ref{fig:iotrace_lammps_iosize_cdf}知，约90\%的IO请求数据量均大于一个块。 如图\ref{fig:iotrace_lammps_iostart_block_cdf}，大约半数的IO请求起始地址按块对齐，另一半IO请求的起始地址偏移为512KB，恰好为半个块大小。如图\ref{fig:iotrace_lammps_ioend_block_cdf}，IO请求结束地址的情况与此类似。
 
 \subsection{MACDRP应用的IO特征分析}
 \label{ssc:ioana}
@@ -67,10 +80,10 @@ MACDRP能够模拟地震波在具有足够精度地表地形下的传播效果�
 \begin{figure}[H]
   \centering
   \subcaptionbox{MACDRP的IO Trace\label{fig:iotrace_macdrp}}
-    {\includegraphics[width=0.4\textwidth]{iotrace_macdrp.pdf}}
+    {\includegraphics[width=0.4\textwidth]{iotrace_macdrp.png}}
   \hspace{4em}
   \subcaptionbox{MACDRP的IO Trace（部分）\label{fig:iotrace_macdrp_sub}}
-      {\includegraphics[width=0.4\textwidth]{iotrace_macdrp_sub.pdf}}
+      {\includegraphics[width=0.4\textwidth]{iotrace_macdrp_sub.png}}
   \caption{MACDRP的IO Trace}
   \label{fig:iotrace_macdrp_all}
 \end{figure}
@@ -79,20 +92,35 @@ MACDRP能够模拟地震波在具有足够精度地表地形下的传播效果�
 \begin{figure}[H]
   \centering
   \subcaptionbox{MACDRP的IO请求数据量累积分布函数\label{fig:iotrace_macdrp_iosize_cdf}}
-    {\includegraphics[width=0.25\textwidth]{iotrace_macdrp_iosize_cdf.pdf}}
+    {\includegraphics[width=0.25\textwidth]{iotrace_macdrp_iosize_cdf.png}}
   \hspace{1em}
   \subcaptionbox{MACDRP的IO请求起始地址页内偏移量累积分布函数\label{fig:iotrace_macdrp_iostart_cdf}}
-      {\includegraphics[width=0.25\textwidth]{iotrace_macdrp_iostart_cdf.pdf}}
+      {\includegraphics[width=0.25\textwidth]{iotrace_macdrp_iostart_cdf.png}}
       \hspace{1em}
       \subcaptionbox{MACDRP的IO请求结束地址页内偏移量累积分布函数\label{fig:iotrace_macdrp_ioend_cdf}}
-          {\includegraphics[width=0.25\textwidth]{iotrace_macdrp_ioend_cdf.pdf}}
+          {\includegraphics[width=0.25\textwidth]{iotrace_macdrp_ioend_cdf.png}}
   \caption{MACDRP的IO请求按页对齐情况}
   \label{fig:iotrace_macdrp_iocdf}
 \end{figure}
 
 图\ref{fig:iotrace_macdrp_iocdf}显示了MACDRP的IO请求按页对齐的情况。由图\ref{fig:iotrace_macdrp_iostart_cdf}和图\ref{fig:iotrace_macdrp_ioend_cdf}可知，其绝大部分IO请求都能按页对齐，仅有少量请求的开始/结束地址页内偏移量不为0。图\ref{fig:iotrace_macdrp_iosize_cdf}表明MACDRP的几乎所有IO请求数据量大小均相同，为512KB。
 
+\begin{figure}[H]
+  \centering
+  \subcaptionbox{MACDRP的IO请求起始地址块内偏移量累积分布函数\label{fig:iotrace_macdrp_iostart_block_cdf}}
+      {\includegraphics[width=0.4\textwidth]{iotrace_macdrp_iostart_block_cdf.png}}
+      \hspace{1em}
+      \subcaptionbox{MACDRP的IO请求结束地址块内偏移量累积分布函数\label{fig:iotrace_macdrp_ioend_block_cdf}}
+          {\includegraphics[width=0.4\textwidth]{iotrace_macdrp_ioend_block_cdf.png}}
+  \caption{MACDRP的IO请求按块对齐情况}
+  \label{fig:iotrace_macdrp_iocdf_block}
+\end{figure}
+
+图\ref{fig:iotrace_macdrp_iocdf_block}展示了MACDRP的IO请求按块对齐的情况。这里的块大小取为后续实验使用的SSD块大小1MB（32个页）。由图\ref{fig:iotrace_macdrp_iosize_cdf}知，几乎所有的IO请求数据量均为512KB，为半个块大小。 如图\ref{fig:iotrace_macdrp_iostart_block_cdf}，大约半数的IO请求起始地址按块对齐，另一半IO请求的起始地址偏移为512KB，恰好为半个块大小。如图\ref{fig:iotrace_macdrp_ioend_block_cdf}，IO请求结束地址的情况与此类似。
+
 根据以上的分析，可以发现所选高性能应用的IO负载具有覆盖写比例高、请求按页对齐、一次请求写入的数据量恰好为整数页的特点。这样的负载在写入时必然会在过程中创造大量连续的无效数据区域，这些区域在被垃圾回收时可以直接擦除而无需重新写入脏页。根据这一特点，可以尝试简化现有闪存转换层的垃圾回收算法，或者简化其映射方式。
+
+同时注意到LAMMPS与MACDRP两种负载的不同之处在于，LAMMPS约有一半的写请求按块对齐，且大部分写请求数据量大于等于一个块大小；而MACDRP几乎所有写请求都只有半个块大小。后者的这一特性使得映射方式需要对其进行特殊处理。
 
 \section{本章小结}
 本章首先介绍实验所用的开放通道SSD设备的内部结构、读写特点以及其定制性强的优势，然后分析了LAMMPS和MACDRP两种高性能应用IO负载的特征，并探讨了根据其特征对闪存转换层进行优化的可能性。
