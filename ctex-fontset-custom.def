@@ -1,4 +1,4 @@
-\setCJKmainfont[BoldFont=SimHei,ItalicFont=KaiTi]{SimSun}
+\setCJKmainfont[ItalicFont=KaiTi, AutoFakeBold=3]{SimSun}
 \setCJKsansfont{SimHei}
 \setCJKmonofont{KaiTi}
 \setCJKfamilyfont{zhsong}{SimSun}
