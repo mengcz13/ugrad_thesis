@@ -81,8 +81,10 @@
 \RequirePackage{ifxetex}
 \RequirePackage{xparse}
 \RequirePackage{amsmath}
-\RequirePackage[defaultsups]{newtxtext}
-\RequirePackage{newtxmath}
+% \RequirePackage[defaultsups]{newtxtext}
+% \RequirePackage{newtxmath}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
 \RequirePackage{courier}
 \RequirePackage{graphicx}
 \RequirePackage[labelformat=simple]{subcaption}
